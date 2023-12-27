@@ -1,0 +1,1 @@
+![Alt text]([https://github.com/MANISH-RANA229/FortniteLandingPage/blob/main/Screenshot%20(72).png](https://res.cloudinary.com/drxuh0lm5/image/upload/v1703708934/qe0gsj2arc1kdfexb6ao.png)https://res.cloudinary.com/drxuh0lm5/image/upload/v1703708934/qe0gsj2arc1kdfexb6ao.png)
