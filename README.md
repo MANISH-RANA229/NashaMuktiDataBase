@@ -1,1 +1,1 @@
-![Alt text]([https://github.com/MANISH-RANA229/FortniteLandingPage/blob/main/Screenshot%20(72).png](https://unsplash.com/photos/man-in-middle-of-wheat-field-6VPEOdpFNAs)https://unsplash.com/photos/man-in-middle-of-wheat-field-6VPEOdpFNAs)
+
