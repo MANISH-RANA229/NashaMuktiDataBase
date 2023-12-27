@@ -1,0 +1,85 @@
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    
+    align-items: center;
+    height: 100vh;
+    background-color:#272c4a ;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  
+  }
+  .image{
+    
+    height: 70px;
+  }
+  
+  #sign-up-form {
+    
+    
+    padding: 20px;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    
+    
+    align-items: center;
+    border: 3px solid white;
+  }
+  
+  h2.vk {
+    text-align: center;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="password"],
+  form input[type="date"],
+  form select,
+  form input[type="number"],
+  form button {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  form button:active {
+    background-color: #3e8e41;
+  }
+  
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    
+  }
+  form{
+    padding-top: 30px;
+    padding: 30px;
+    overflow-x: hidden;
+  
+    
+    
+  }

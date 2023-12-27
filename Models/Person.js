@@ -1,42 +1,75 @@
 const mongoose = require('mongoose');
 
-const addictionInfoSchema = new mongoose.Schema({
-  name: {
-    type: String,
+const PersonSchema = new mongoose.Schema({
+  RegistrationNo:{
+    type:String,
     required: true
   },
+  Name:{
+    type:String,
+    required:true,
+    trim:true,
+  },
+  mobileNumber:{
+    type:String,
+    required: true,
+   
+  },
   email:{
+    type:String,
+    required: true,
+    unique: true,
+
+  },
+  State:{
+    type:String,
+    required:true,
+    trim:true,
+  },
+  City:{
+    type:String,
+    required:true,
+    trim:true,
+  },
+  DeAddictionCenter:{
+    type:String,
+    required:true,
+    trim:true,
+  },
+  DateOfRegistration: {
+    type:Date,
+    required:true,
+    trim:true,
+  },
+  TypeOfDrug:{
+    type:String,
+    required:true,
+    trim:true,
+  },
+ 
+  addictionPeriod: {
+    type: Number,
+    min: 0 
+  },
+  Medication:{
     type:String,
     required:true,
     trim:true,
   },
   
-  city:{
-    type:String,
-    required:true,
-    trim:true,
-  },
-  state:{   
-    type:String,
-    required:true,
-    trim:true,
-  },
-  age: {
-    type: Number,
-    min: 15 
-  },
-  addictionPeriod: {
-    type: Number,
-    min: 0 
-  },
-  mobileNumber:{
-    type:String,
+  RecovringStatus: {
+    type: String,
+    enum : ['Active','Recovered'],
+    default: 'Active', 
     required: true,
-    unique: true,
+  },
+  ProvidedBeneficiary: {
+    type: String,
+    required: true,
   },
 
 });
 
-const AddictionInfo = mongoose.model('AddictionInfo', addictionInfoSchema);
+const AddictionInfo = mongoose.model('PersonSchema', PersonSchema);
 
 module.exports = AddictionInfo;

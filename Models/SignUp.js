@@ -21,6 +21,14 @@ const SignUpSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    city:{
+        type:String,
+        required:true,
+    },
+    state:{
+        type:String,
+        required:true,
+    },
     Gender: {
         type: String,
         enum: ['Male', 'Female', 'Other'], 
@@ -48,6 +56,11 @@ const SignUpSchema = new mongoose.Schema({
         default: 'user', // Default role for a new user
         required: false,
       },
+     otp:{
+         type:String,
+         required:true,
+          expires:300,
+     },
 });
 
 module.exports = mongoose.model("SignUp", SignUpSchema);

@@ -5,7 +5,7 @@ const { options } = require("../Routes/Routes");
 //add profile
 exports.addProfile = async (req, res) => {
   try {
-    const { name,email,city, state,age,addictionPeriod,mobileNumber} = req.body;
+    const {RegistrationNo,Name,mobileNumber,email,State,City,DeAddictionCenter,DateOfRegistration,TypeOfDrug,addictionPeriod,Medication,RecovringStatus,ProvidedBeneficiary} = req.body;
     
 
     const existingProfile = await User.findOne({
@@ -20,9 +20,7 @@ exports.addProfile = async (req, res) => {
       });
     }
 
-    const profile = await User.create({
-        name,email,city, state,age,addictionPeriod,mobileNumber
-    });
+    const profile = await User.create({RegistrationNo,Name,mobileNumber,email,State,City,DeAddictionCenter,DateOfRegistration,TypeOfDrug,addictionPeriod,Medication,RecovringStatus,ProvidedBeneficiary});
     
 
     console.log(profile);
@@ -45,7 +43,7 @@ exports.addProfile = async (req, res) => {
 //get profile of all users
 exports.profileList = async (req, res) => {
   try {
-    const profiles = await User.find().sort({ addictionPeriod: -1 });
+    const profiles = await User.find().sort({ addictionPeriod: -1 }).select('-_id');;
 
     return res.status(200).json({
       success: true,

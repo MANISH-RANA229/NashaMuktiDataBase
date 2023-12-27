@@ -6,7 +6,7 @@ const User = require("../Models/SignUp");
 exports.auth = (req,res, next) => {
     try{
          
-            console.log("cookie" , req.cookies);
+          
           
             const token = req.cookies.token;
 

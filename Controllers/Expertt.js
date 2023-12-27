@@ -4,7 +4,7 @@ const { options } = require("../Routes/Routes");
 //add expert
 exports.addExpert = async (req, res) => {
     try {
-      const {Name,city,state,Qualifications,Description,Rating,Reviews,contact} = req.body;
+      const {Name,city,state,Qualifications,Description,contact} = req.body;
       console.log(req.body);
 
     
@@ -26,7 +26,7 @@ exports.addExpert = async (req, res) => {
   
   
       const expert = await Expert.create({
-        Name,city,state, Qualifications,Description,Rating,Reviews,contact
+        Name,city,state, Qualifications,Description,contact
       });
       console.log("here");
 
@@ -50,7 +50,6 @@ exports.addExpert = async (req, res) => {
   exports.expertList = async (req, res) => {
     try {
       const expertList = await Expert.find().sort({ Rating: -1 });
-      // Sorting by rating in descending order (higher ratings first)
   
       return res.status(200).json({
         success: true,

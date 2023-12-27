@@ -24,16 +24,7 @@ const expertSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  Rating: {
-    type: Number,
-    default: 0
-  },
-  Reviews: [
-    {
-      user: String,
-      comment: String
-    }
-  ],
+  
   contact: {
     type: String,
     required: true

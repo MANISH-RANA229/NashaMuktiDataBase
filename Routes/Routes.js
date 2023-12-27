@@ -7,15 +7,32 @@ const {auth, isAdmin,isUser,isBoth} = require("../Middleware/auth");
 const{addCenter,centreList}=require("../Controllers/AddCenters");
 const{addExpert,expertList}=require("../Controllers/Expertt");
 const {addProfile,profileList} = require("../Controllers/Profile");
+const{countMembers}=require('../Controllers/AdminHome');
+const {sendotp} = require("../Controllers/otp");
+const{Stateinfo,Statewise}=require("../Controllers/State");
+
 
 router.post("/login", login);
 router.post("/signup", signup);
+
 router.post("/addCenter",auth ,isAdmin,addCenter);
 router.get("/centreList",auth,centreList);
 router.post("/addExpert",auth,isAdmin,addExpert);
 router.get("/expertList",auth,expertList);
 router.post("/addProfile",auth,isAdmin,addProfile);
 router.get("/profileList",auth,isAdmin,profileList);
+router.post("/Stateinfo",Stateinfo,auth,isAdmin);
+router.get("/Statewise",Statewise,auth,isAdmin);
+
+
+
+
+//home page of admin
+
+router.get("/AdminHome",auth,isAdmin,countMembers,);
+
+//otp
+router.post("/sendotp", sendotp);
 
 
 
@@ -41,14 +58,6 @@ router.get("/Admin", auth, isAdmin, (req,res) => {
          message:'Welcome to the Protected route for user',
      });
  });
-
-
-
- 
-
-   
-
-
 
 module.exports = router;
 

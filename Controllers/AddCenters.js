@@ -4,14 +4,15 @@ const { options } = require("../Routes/Routes");
 //add centre
 exports.addCenter = async (req, res) => {
     try {
-      const {centerName,city,state,reviews } = req.body;
+      const { Name, City, State, RegisteredUsers, ActiveUsers, RecoveredUsers } = req.body;
+
 
     
 
       const existingCenter = await Center.findOne({
-        centerName,
-        city,
-        state
+        Name,
+        City,
+        State
       });
       console.log(existingCenter);
   
@@ -23,12 +24,7 @@ exports.addCenter = async (req, res) => {
       }
 
 
-      const center = await Center.create({
-        centerName,
-        city,
-        state,
-        reviews, // Assuming reviews is an array of objects with user, rating, and comment properties
-      });
+      const center = await Center.create({ Name, City, State, RegisteredUsers, ActiveUsers, RecoveredUsers });
       console.log(center);
       return res.status(200).json({
         success: true,

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>state</title>
+    <style>
+    body {
+
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        
+        
+        align-items: center;
+        height: 100px;
+        background-color:#272c4a ;
+        overflow-x: hidden;
+        
+        
+      
+      }
+      .image{
+        
+        height: 70px;
+      }
+      
+      #sign-up-form {
+        
+        
+        padding: 30px;
+        padding-top: 2px;
+        
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        
+        
+        align-items: center;
+        border: 3px solid white;
+      }
+      
+      h2.vk {
+        text-align: center;
+        color: white;
+        
+        
+      }
+      
+      form label {
+        display: block;
+        margin-bottom: 6px;
+      }
+      
+      form input[type="text"],
+      form input[type="email"],
+      form input[type="tel"],
+      form input[type="password"],
+      form input[type="date"],
+      form select,
+      form input[type="number"],
+      form button {
+        color: black;
+        width: calc(100% - 12px);
+        padding: 8px;
+        margin-bottom: 12px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      
+      form button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      
+      form button:hover {
+        background-color: #45a049;
+      }
+      
+      form button:active {
+        background-color: #3e8e41;
+      }
+      
+      .wrapper{
+        display: flex;
+        justify-content: center;
+        
+      }
+      form{
+        padding-top: 30px;
+        padding-bottom: 20px;
+        overflow-x: hidden;
+      
+        
+        
+      }
+      
+      #name{
+        color: white;
+      }
+      
+      /* Existing CSS code... */
+      
+      form label[for="dob"],
+      form label[for="gender"] {
+        color: white;
+      }
+    
+      /* CSS for Gender select */
+    form select {
+        color: rgb(80, 77, 77);
+        width: calc(100% - 12px);
+        padding: 8px;
+        margin-bottom: 12px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      
+      /* CSS for Date of Birth input */
+      form input[type="date"] {
+        color: rgb(58, 56, 56);
+        width: calc(100% - 12px);
+        padding: 8px;
+        margin-bottom: 12px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+    
+    
+      
+    
+      @media only screen and (max-width: 600px){
+        body {
+            padding: 20px;
+          }
+    
+      }</style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <form>
+        <div id="sign-up-form">
+            <h2 class="vk"></h2>
+
+            <form action="#" method="post">
+
+                <label for="StateName"></label>
+                 
+                <input type="text" id="StateName" name="StateName" placeholder="Name Of State" required>
+                <br><br>
+                <label for="NoOfCenters"></label>
+                <input type="number" id="NoOfCenters" name="NoOfCenters" placeholder="Number Of Center" required>
+                <br><br>
+                <label for="TotalUsers"></label>
+                <input type="number" id="TotalUsers" name="TotalUsers" placeholder="Total Users" required>
+                <br><br>
+                <label for="ActiveUser"></label>
+                <input type="number" id="ActiveUser" name="ActiveUser" placeholder="Number of Active User" required>
+            
+        
+            <br>
+            <br>
+            <label for="RecoveredUsers"></label>
+            <input type="number" id="RecoveredUsers" name="RecoveredUsers" placeholder="Recovered Users" required>
+            
+            
+           <br><br>
+            
+            
+            <button type="submit" onclick="validateForm()">Submit</button>
+            
+                
+            </form>
+            </div>
+           
+</form>
+            
+            
+            
+                
+                
+                
+                    
+                    
+    </div>
+
+
+            
+
+    
+    </body>
